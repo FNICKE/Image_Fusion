@@ -68,9 +68,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
         />
         
         {/* After Image (Top Layer with Clipping) */}
-        <div
-          className="absolute inset-0 overflow-hidden"
-          style={{ clipPath: `polygon(${sliderPosition}% 0%, 100% 0%, 100% 100%, ${sliderPosition}% 100%)` }}
+        <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `polygon(${sliderPosition}% 0%, 100% 0%, 100% 100%, ${sliderPosition}% 100%)` }}
         >
           <img
             src={afterImage}
@@ -79,42 +77,16 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
             draggable={false}
           />
         </div>
-        
-        {/* Slider Line */}
-        <div
-          className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
-          style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
-        >
-          {/* Slider Handle */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center">
-            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-          </div>
-        </div>
-        
-        {/* Labels */}
-        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg text-sm font-medium">
-          {beforeLabel}
-        </div>
-        <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-lg text-sm font-medium">
-          {afterLabel}
-        </div>
       </div>
       
-      {/* Slider Control */}
-      <div className="p-4 border-t border-gray-700">
-        <div className="flex items-center space-x-4">
-          <span className="text-sm text-gray-400">Comparison:</span>
-          <div className="flex-1">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={sliderPosition}
-              onChange={(e) => setSliderPosition(Number(e.target.value))}
-              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
-            />
-          </div>
-          <span className="text-sm text-gray-400">{Math.round(sliderPosition)}%</span>
+      {/* Slider Line */}
+      <div
+        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
+        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+      >
+        {/* Slider Handle */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center">
+          <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
         </div>
       </div>
     </div>

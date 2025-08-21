@@ -1,4 +1,10 @@
-fastapi
-uvicorn
-opencv-python
-python-multipart
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+opencv-python==4.8.1.78
+python-multipart==0.0.6
+numpy==1.24.3
+Pillow==10.0.1
+
+# Optional: For advanced image processing
+ scikit-image==0.21.0
+ scipy==1.11.4
