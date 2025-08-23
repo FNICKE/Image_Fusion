@@ -672,4 +672,4 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ className = '', onImageUpload
   );
 };
 
-export default ImageUpload;
+export default ImageUpload; 

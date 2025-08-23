@@ -61,8 +61,8 @@ const Preprocessing: React.FC = () => {
         {/* Comparison Slider */}
         <div className="mb-8">
           <ComparisonSlider
-            beforeImage="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?blur=5"
-            afterImage="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg"
+            beforeImage=""
+            afterImage=""
             beforeLabel="Original (Blurry)"
             afterLabel="AI-Enhanced (Clear)"
           />
